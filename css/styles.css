@@ -175,7 +175,7 @@ if you want to style them separately,
 create styles for #leftSidebar and #rightSidebar */
 aside {
     background-color: var(--background-color);
-    width: 245px;
+    width: 230px;
     padding: 8px;
     font-size: 10px;
     /* this makes the sidebar text slightly smaller */
@@ -500,3 +500,36 @@ h1 { font-size :20px; }
     font-family: 'Title';
     font-size: 35px;
 }
+
+.frame h2 {
+    background-color:#86375e6b; /* Fondo oscuro */
+    padding: 6px;
+    margin-bottom: 2%;
+    
+    font-weight: bold;
+    color: var(--primary-color); /* Texto blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreado suave */
+    
+    position: relative;
+}
+
+.frame h2::after {
+    content: "";
+    top: 0;
+    right: 2%; /* posición a la derecha del texto */
+    height: 70%; /* altura del cursor */
+    border-right: 1px solid #ccc; /* borde derecho del cursor */
+    animation: blink 1.5s infinite; /* animación de parpadeo */
+  }
+  
+  @keyframes blink {
+    0% {
+      border-right-color: #ccc;
+    }
+    50% {
+      border-right-color: transparent;
+    }
+    100% {
+      border-right-color: #ccc;
+    }
+  }
