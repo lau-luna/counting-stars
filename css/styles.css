@@ -1,0 +1,502 @@
+/* user styles */
+
+/* styles are what change the color and sizes of stuff on your site. */
+
+/* these are variables that are being used in the code
+these tended to confuse some people, so I only kept 
+the images as variables */
+
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/nintai2.png');
+
+    --border-width: 1px;
+    --background-color: #0D0D0D; /* Almost black */
+    --foreground-color: #1A1A1A; /* Dark gray */
+    --text-color: #E0E0E0; /* Light gray for text */
+    --link-color: #00BFFF; /* Bright blue for links */
+    --hover-color: #FF69B4; /* Hot pink for hover effects */
+    --border-color: #333333; /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+
+
+
+    --round-thing: 7px;
+}
+
+/* if you have the URL of a font, you can set it below */
+/* feel free to delete this if it's not your vibe */
+
+@font-face {
+    font-family: Nunito;
+    src: url('../fonts/CyberpunkWaifus\ \(1\).ttf');
+}
+
+@font-face {
+    font-family: Sans;
+    src: url('../fonts/Pokemon\ Classic.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Title;
+    src: url('../fonts/Pixel-Life.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Playfair Display;
+    src: url('https://sadhost.neocities.org/fonts/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url('https://sadhost.neocities.org/fonts/Pacifico-Regular.ttf');
+}
+
+body {
+    font-family: 'Nunito';
+    margin: 0;
+    background-size: 100px 100px;
+    background-color:  var(--foreground-color);
+    background-image: var(--body-bg-image);
+    color: var(--text-color);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+/* the "container" is what wraps your entire website */
+#container {
+    max-width: 780px;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+    margin: 0 auto;
+    /* this centers the entire page */
+    font-size: 16px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: var(--primary-color) 1px;
+    border-style: solid;
+    border-radius: 2%;
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+    color: var(--secondary-color);
+    /* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#header {
+    width: 100%;
+    background-color: var(--primary-color);
+    /* header color here! */
+    height: 240px;
+    /* this is only for a background image! */
+    /* if you want to put images IN the header, 
+you can add them directly to the <div id="header"></div> element! */
+    background-image: var(--header-image);
+    background-size: 100%;
+    background-position: 100% 70%;
+    
+}
+
+/* navigation section!! */
+#navbar {
+    
+    /* navbar color */
+    width: 100%;
+    font-family: 'Sans';
+    font-size: 12px;
+    border :1px solid var(--border-color); 
+    box-shadow :0 4px 8px var(--shadow-color); 
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+#navbar li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 1%;
+    padding-right: 1%;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#navbar li:hover {
+    letter-spacing: 2px; /* Separamos las letras 2px entre sí */
+  }
+  
+ 
+
+
+/* navigation links*/
+#navbar li a {
+    color: var(--secondary-color);
+    /* navbar text color */
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+    color: #a49cba;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+    background-color: var(--background-color);
+    width: 245px;
+    padding: 8px;
+    font-size: 10px;
+    /* this makes the sidebar text slightly smaller */
+}
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+    background-color: var(--background-color);
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+/* what's this "order" stuff about?? 
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    background-color: var(--accent-color);
+    /* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    /* this centers the footer text */
+    background-image: url('https://example.com/wave-motif.png');
+    background-size: 100% 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Sans';
+    color: var(--accent-color);
+    margin-top: 0%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+strong {
+    /* this styles bold text */
+    color: var(--secondary-color);
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
+/* CSS for extras */
+
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: var(--accent-color);
+}
+
+.kanji {
+    font-size: 24px;
+    font-family: 'Kanji', serif;
+    color: var(--accent-color);
+}
+
+.cherry-blossom {
+    background-image: url('https://example.com/cherry-blossom-pattern.png');
+    background-size: 100% 100px;
+    background-repeat: repeat;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main {
+    padding-top: 0%;
+    font-size: 18px;
+}
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+    main {
+        order: 1;
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* Body Styles */
+body {
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Universal Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+#container {
+    max-width: 1150px;
+    margin: 0 auto;
+    
+    border: var(--border-color) var(--border-width) solid;
+    border-radius: var(--round-thing);
+}
+
+/* Header Styles */
+#header {
+    width: 100%;
+    background-color: var(--foreground-color);
+    height: 240px;
+    background-image: var(--header-image);
+    background-size: cover;
+}
+
+/* Navbar Styles */
+#navbar {
+    width: 100%;
+    font-family: 'Sans';
+    font-size: 12px;
+    background-color: var(--background-color);
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#navbar li {
+   display:inline-block;
+}
+
+/* Link Styles */
+#navbar li a {
+   color: var(--link-color);
+   text-decoration:none; 
+}
+
+#navbar li a:hover {
+   color: var(--hover-color);
+   text-decoration:double;
+}
+
+/* Sidebar Styles */
+aside {
+   background-color: var(--background-color);
+   padding: 10px;
+}
+
+/* Main Content Area */
+main {
+   background-color: var(--background-color);
+   padding-top: 10px; 
+   padding-left: 0;
+   padding-right: 0;
+}
+
+/* Footer Styles */
+footer {
+   background-color: var(--foreground-color);
+   padding: 10px;
+   text-align:center; 
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+   color :var(--text-color); 
+}
+
+h1 { font-size :20px; }
+
+/* Box Styles */
+.box {
+   background-color :var(--foreground-color); 
+   border :1px solid var(--border-color); 
+   padding :15px; 
+}
+
+.frame {
+   border :1px solid var(--border-color); 
+   padding :4px; 
+   box-shadow :0 4px 8px var(--shadow-color); 
+}
+
+.frame-main {
+    border :1px solid var(--border-color); 
+   padding : 15px; 
+   box-shadow :0 4px 8px var(--shadow-color);
+}
+
+/* Extras for Y2K Style */
+#topBar {
+   width :100%; 
+   height :30px; 
+   padding :10px; 
+   font-size :smaller; 
+   background-color :var(--hover-color); 
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width :800px) {
+   #flex { flex-wrap :wrap; }
+   
+   aside { width :100%; }
+   
+   main { order :1; }
+   
+   #leftSidebar { order :2; }
+   
+   #rightSidebar { order :3; }
+   
+   #navbar ul { flex-wrap :wrap; }
+}
+
+
+.update-container {
+    background-color: var(--foreground-color); /* Black background for console effect */
+    color: var(--primary-color); /* Green text color typical of command prompts */
+    font-family: 'Nunito';
+    padding: 10px; /* Padding around the text */
+    border: 1px solid #333; /* Dark border */
+    height: 300px; /* Fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 16px;
+}
+
+/* Custom scrollbar styles */
+.update-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+.update-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+.update-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+.update-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+
+#header {
+    position: relative; /* Ensure it is positioned relative to its container */
+    height: 240px; /* Maintain your desired height */
+}
+
+.title {
+    position: absolute; /* Position it absolutely within #header */
+    bottom: 0px; /* Adjust this value to place it where you want */
+    left: 90%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    text-align: center; /* Center text alignment */
+}
+
+.title{
+    display: flex;
+    flex-direction: row; /* Add this line */
+    justify-content: flex-end;
+    padding-top: 16%;
+    
+}
+
+
+.title h1 { 
+    font-family: 'Title';
+    font-size: 35px;
+}

@@ -1,0 +1,799 @@
+
+
+<!-- 
+
+my sphagetti code is so messy help
+
+if you see a text effect or other thing you like, don't be afraid to copy, chances are i got it from someone else 
+
+you can always check the credis on my page for the music player/text effect/layout, whatevs
+
+just make sure you give proper credit to the creators as it's the polite thing to do
+
+other than that i don't care if you copy things from my code, so long as it's not a one-for-one of my site obv
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.gif">
+    <title>♡︎ 2AIN ♡</title>
+    <link href="newstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&amp;display=swap" rel="stylesheet">
+    <link href="https://478.neocities.org/catalog/fonts.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+    
+      <style>
+      
+    @font-face {
+    font-family: "cyberpunkwaifus"; 
+    src: url("/fonts/CyberpunkWaifus.ttf") format("truetype");
+    }
+    
+    @font-face {
+        font-family: "doctorglitch"; 
+        src: url("/fonts/DoctorGlitch.otf") format("opentype"); 
+    }
+    
+    @font-face {
+        font-family: "glitchgoblin"; 
+        src: url("/fonts/GlitchGoblin.ttf") format("truetype");
+    }
+    
+    @font-face {
+        font-family: "glitchy"; 
+        src: url("/fonts/Glitchy.ttf") format("truetype");
+    }
+          
+    ::-webkit-scrollbar{
+    width: 6px; 
+    }
+
+    ::-webkit-scrollbar-track{
+    background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb{
+    background-color: white;
+    }
+          
+    ::selection {
+            background: #451571;
+            color:white;
+    }
+          
+    ::-moz-selection {
+            background: #451571;
+            color:white;
+    }
+          
+    #musicplayer{
+        background:darkorchid; /* background color of player */
+        border:2px solid darkorchid; /* border around player */
+        width:173px; /* width of the player */
+    }
+ 
+    .songtitle{
+        padding:5px; /* padding around song title */
+        border-bottom:2px solid blueviolet; /* border under song title */
+        display:block;
+    }
+ 
+    .controls{
+        font-size:18px !important; /* size of controls */
+        background-color:#141414; /* background color of controls */
+        text-align:center;
+        width:100%;
+    }
+ 
+    .controls td{
+        padding:8px 5px 0px 5px; /* padding around controls */
+    }
+ 
+    .seeking{
+        background-color:#141414; /* background color of seeking bar */
+        display:flex;
+        justify-content: space-evenly;
+        padding:5px; /* padding around seeking bar */
+    }
+ 
+    .current-time{
+        padding-right:5px;
+    }
+ 
+    .total-duration{
+        padding-left:5px;
+    }
+ 
+    i.fas:hover{
+        cursor:help;
+    }
+ 
+    i.fas.fa-pause, i.fas.fa-play, i.fas.fa-forward, i.fas.fa-backward{
+        color:blueviolet; /* color of controls */
+    }
+    
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        background-color:#141414; /* background color of seeking bar - make the color same as .seeking background color */
+    }
+    
+    input[type=range]:focus {
+        outline: none;
+    }
+    
+    /* settings for chrome browsers */
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px; /* thickness of seeking track */
+        cursor: help;
+        background: blueviolet; /* color of seeking track */
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+        height: 10px; /* height of seeking square */
+        width: 10px; /* width of seeking square */
+        border-radius: 0px; /* change to 5px if you want a circle seeker */
+        background: blueviolet; /* color of seeker square */
+        cursor: help;
+        -webkit-appearance: none;
+        margin-top: -4.5px; 
+    }
+    
+    /* settings for firefox browsers */
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 2px; /* thickness of seeking track */
+        cursor: help;
+        background: blueviolet; /* color of seeking track */
+    }
+    
+    input[type=range]::-moz-range-thumb {
+        height: 10px; /* height of seeking square */
+        width: 10px; /* width of seeking square */
+        border-radius: 0px; /* change to 5px if you want a circle seeker */
+        background: blueviolet; /* color of seeker square */
+        cursor: help;
+        border:none;
+    }
+    
+    body {
+        font-family: 'cyberpunkwaifus';
+    }
+    
+    h1, h2, h3 {
+        font-family: 'glitchgoblin';
+    }
+    
+    li {
+        font-family: 'cyberpunkwaifus';
+    }
+    
+    .blog {
+        font-family: 'doctorglitch';
+    }
+    
+    .link a {
+        font-family: 'glitchgoblin';
+    }
+    
+    .spoiler { 
+        color: white;
+        background-color: white;
+    }
+
+    .spoiler:hover {
+        color: black;
+    }
+    
+    code {
+        font-family: Consolas,"courier new";
+        color: lavender;
+        background-color: #141414;
+        padding: 2px;
+        font-size: 14px;
+     }
+     
+</style>
+    
+  </head>
+  <body>
+  
+  <div class="crt">
+  
+  <div class=wrapper>
+  
+  <div class=header>
+  <div class=header-shadow></div>
+  </div>
+  
+    <div class=title>
+    <h1 class="glitch">2ain.net</h1></div>
+  
+  <div class=links>
+    <div class=link><a href="/index.html">Home</a></div>
+    <div class=link><a href="/about.html">About</a></div>
+    <div class=link><a href="/blog.html">Blog</a></div>
+    <div class=link><a href="/media.html">Media</a></div>
+    <div class=link><a href="/gallery.html">Gallery</a></div>
+    <div class=link><a href="/projects.html">Projects</a></div>
+    <div class=link><a href="index.html#chatbox">Chatbox</a></div>
+    <div class=link><a href="https://users3.smartgb.com/g/g.php?a=s&amp;i=g36-36522-a5">Guestbook</a></div>
+  </div>
+  
+  <div class=wrapper-2>
+  
+  <div class=main>
+      
+    <div class=box><div class=inner>
+        
+    <!-- huge button marquee-->
+    <marquee onmouseover="this.stop();" onmouseout="this.start();">  
+        <a href="https://buttonwall.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/btn1.png"></a>
+        <a href="https://buttonwall.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/btn2.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn3.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn4.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn5.png"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn6.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn7.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn8.gif"></a>
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn9.gif"></a>
+        <!-- i don't remember where this one came from --><img src="/images/btn16.png">
+        <a href="https://fustilugz.neocities.org/Buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn10.gif"></a>
+        <a href="https://y2k.neocities.org/buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn13.gif"></a>
+        <a href="https://y2k.neocities.org/buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn14.gif"></a>
+        <a href="https://y2k.neocities.org/buttons" target="_blank" rel=“noopener noreferrer”><img src="/images/btn15.gif"></a>
+    </marquee>  
+    <!-- end of button maequee-->
+        <hr>
+        <center>
+        <p><b>You can view this site on mobile, but it looks way better on computer.<br>This site has been tested on chrome and firefox only, if you use a different browser, I can't gurantee things aren't broken.</b></p><hr class="style2">
+        <p>Hello! Welcome to my silly little neocities site! I made this site to compile all my <s>bullshit</s> creativity together in one little domain. I talk a lot about video games, anime, music, some films, and random shit that nobody cares about. Have a look around and explore! I hope that there's something around here that will pique your interest.</p>
+        <p>I reccomend checking out the media page as it probably has the most interesting things on the site, from movies, tv shows, anime, video games, and other things for your viewing pleasure. Or if you want to read about me being a dumbass, the blog page is your destination, where my diary and blog posts are.</p>
+        <a href="https://www.tumblr.com/engravedlives" target="_blank" rel=“noopener noreferrer”><img src="/images/stamplol.png"></a>
+        <p class="center">Have some snacks as you browse.</p>
+        <div style="text-align: center;">
+            <a href="https://pixeloving.neocities.org/food%20and%20drink/fooddrink" target="_blank" rel="noopener noreferrer"><img src="/images/yum1.png"></a>
+            <a href="https://pixeloving.neocities.org/food%20and%20drink/fooddrink" target="_blank" rel="noopener noreferrer"><img src="/images/yum2.png"></a>
+            <hr>
+            <a href="http://users3.smartgb.com/g/g.php?a=s&amp;i=g36-36522-a5"><img alt="Guestbook" border="0" src="http://extras3.smartgb.com/b/gb_80x40.gif" width="80" height="40"></a>
+
+        </div>
+        
+        <hr>
+        <span class="sptitle">Last Updated Page:</span>
+        <p>[ <a href="/diary2.html#four">Diary (2024)</a> ]</p>
+        <hr>
+        
+        <p>Link me! &#9829;</p>
+            <p>My banner (240 x 60)</p>
+            <img src="https://2ainnet.neocities.org/assets/2ainbanner.png">
+            <p>My button (88 x 31)</p>
+            <img src="https://2ainnet.neocities.org/assets/button.png"><br><br>
+            <!-- The text field -->
+            <input type="text" value="https://2ainnet.neocities.org/" id="myInput">
+            <!-- The button used to copy the text -->
+            <button onclick="myFunction()">Copy text</button>
+            <p>Please save the image to your site instead of hotlinking, thank you!</p>
+            <p><i>seriously, these buttons will probably be gone within 2 months</i></p>
+            
+            <hr>
+            
+            <p>Site Last Updated: <span id="lastupdate"></span></p>
+            <p>You are Visitor #: <span id="hitcount"></span></p>
+            
+            <hr>
+            
+            <div id="pop">(„• ᴥ •„) This site was created by <strong>Lain</strong> <b>(2ainnet)</b> July 10th, 2023! <a href="https://i.imgur.com/glcDF92.gif" target="_blank" rel=“noopener noreferrer”><img src="/images/kuromi.gif"></a></div><br>
+            
+        </center>
+    </div></div>
+    
+    <div id="chatbox">
+    <div class=chatbox><div class=inner>
+      <iframe src="https://www3.cbox.ws/box/?boxid=3529999&amp;boxtag=pQkE6O" width="100%" height="390" allowtransparency="yes" allow="autoplay" frameborder="5" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+    </div></div>
+      
+    <div class=box><div class=inner>
+    <a href="https://danbooru.donmai.us/posts/5245005" target="_blank" rel="noopener noreferrer"><img src="/images/lb.png" width="420"  style="float:right; clear: right; transform: scale(1.1);"></a>
+        <a href="https://bettysgraphics.neocities.org"><img src="/images/computer.gif" height="30" width="30"></a>
+        <span class="sptitle">currently playing:</span>
+        <ul class="cute">
+            <li>Final Fantasy XIV</li>
+            <li>Honkai: Star Rail</li>
+            <li>Snowbreak: Containment Zone</li>
+            <li>Wuthering Waves</li>
+            <li>Zenless Zone Zero</li>
+            <li>Dragon Age: Origins</li>
+            <li>Fallout 3</li>
+        </ul>
+        <a href="https://bettysgraphics.neocities.org"><img src="/images/book2.gif" height="30" width="30"></a>
+        <span class="sptitle">currently reading:</span>
+        <ul class="cute">
+            <li>Houseki no Kuni manga</li>
+            <li>Hunter X Hunter manga</li>
+            <li>Air Gear manga</li>
+        </ul>
+        <a href="https://bettysgraphics.neocities.org"><img src="/images/tv.gif" height="25" width="25"></a>
+        <span class="sptitle">currently watching:</span>
+        <ul class="cute">
+            <li>Gintama</li>
+            <li>Bleach</li>
+            <li>Sailor Moon</li>
+            <li>Cardcaptor Sakura</li>
+            <li>Shogun</li>
+        </ul>
+    </div></div>
+    
+    <div class=boxthree>
+      <h2>Gaming Center</h2><div class=inner>
+          <div class="center">
+          
+        <span class="sptitle">last game staus:</span>
+        <p><b>Playing: Wuthering Waves</b></p>
+        <div class="date">June 30th, 2024</div>
+        <p>I played the 1.1 story of Wuthering Waves yesterday! I had seen a lot of people online talking about how good it was. And I must say, they were not lying. The storyline was well-paced, the animations were amazing, they had actual cutscenes, the lighting and style design was absolutely amazing and the new zone is beautiful to top it all off. I especially love Jinhsi's background and <span class="spoiler">the fight with Jué</span>. They really upped everything in this patch, listening to player feedback and adjusting their storyline as promised. I seriously can't get over the beautiful animations and cutscenes though. The new zone puzzles and mechanics were also great.</p>
+        
+        <hr class="style2">
+          
+        <span class="sptitle">last game screenshot:</span>
+        <p><b>Game: FINAL FANTASY XIV</b></p>
+          <img src="/ffxiv/ffxiv35.png" width="80%">
+        <p><i>The prettiest screenshot of my Au Ra</i></p>
+        
+        <hr class="style2">
+        
+        <span class="sptitle">FFXIV</span>
+        <p>Look at my Warrior of Light.</p>
+        <img src="/ffxiv/ffxiv34.png" width="80%">
+        <p>That is all, thank you.</p>
+      </div></div></div>
+      
+      <div class=boxthree>
+      <h2>Music Center</h2><div class=inner>
+          <div class="center">
+          
+          <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                <img src="/images/tape.gif" height="30" width="30"></a>
+              <span class="sptitle">my music activiy:</span>
+              <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/tape.gif" height="30" width="30"></a>
+          <center><a href="https://www.last.fm/user/net2ain" target="_blank" rel="noopener noreferrer"><img src="https://lastfm-recently-played.vercel.app/api?user=net2ain" height="300" width="300"></a></center>
+          
+          <hr class="style2">
+          
+            <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                <img src="/images/recordplayer.gif" height="30" width="30" /></a>
+              <span class="sptitle">featured song:</span>
+            <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                <img src="/images/recordplayer.gif" height="30" width="30" /></a>
+            <br><br>
+            <iframe
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/Vm4FBsHQJt0"
+                title="Learn to Hate"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            <br><br>
+            <span class="sptitle">previous tracks:</span>
+            <center>
+            <div class="tracks center">
+                    <a href="https://youtu.be/ya8dT7oC8qA?list=RDya8dT7oC8qA" target="_blank" rel="noopener noreferrer"><b>Waffle</b></a> by Sevendust<br>
+                    <a href="https://youtu.be/OI-fWgyMXYA" target="_blank" rel="noopener noreferrer"><b>What Comes Around</b></a> by Ill Nino<br>
+                    <a href="https://youtu.be/NTy4Am3MQ4c" target="_blank" rel="noopener noreferrer"><b>Swamped</b></a> by Lacuna Coil<br>
+                    <a href="https://youtu.be/lV6lCHMvvXM" target="_blank" rel="noopener noreferrer"><b>Loser</b></a> by Smile Empty Soul<br>
+                    <a href="https://www.youtube.com/watch?v=Vrr3lRLjZ1Y" target="_blank" rel="noopener noreferrer"><b>Cold</b></a> by Crossfade<br>
+                    <a href="https://youtu.be/PbgKEjNBHqM" target="_blank" rel="noopener noreferrer"><b>In Bloom</b></a> by Nirvana<br>		
+                <a href="https://youtu.be/trinU3VD1Zo?list=RD8f67-2eyhUI" target="_blank" rel="noopener noreferrer"><b>The Red</b></a> by Chevelle<br>
+                <a href="https://youtu.be/W2IVn0wiYXs" target="_blank" rel="noopener noreferrer"><b>Kidnap the Sandy Claws</b></a> by Korn    
+            </div><br>
+            </center><hr class="style2">
+            <br><br>
+              <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/cd.gif" height="30" width="30"></a>
+            <span class="sptitle">my playlist:</span>
+            <a href="https://bettysgraphics.neocities.org" target="_blank" rel="noopener noreferrer">
+                <img src="/images/cd.gif" height="30" width="30"></a>
+              <br><br>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4tvPHZhxAuLz2CBNtBlUfm?utm_source=generator&amp;theme=0" width="75%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <br></div>
+        </div></div>
+      
+    <div class=boxtwo>
+    <h2>Cool Sites</h2>
+    <div class=inner>
+    <center>
+    <p><b>Warning: Some of these websites may contain flashing imagery.</b></p>
+    <p>If you wanna be featured here, just lemme know.</p>
+        <a href="https://eggramen.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link11.png"></a>
+        <a href="https://goblin-heart.net/sadgrl/" target="_blank" rel=“noopener noreferrer”><img src="/images/link10.gif"></a>
+        <a href="https://repth.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link9.png"></a>
+        <a href="https://cepheus.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link12.gif"></a>
+        <a href="https://adilene.net/" target="_blank" rel=“noopener noreferrer”><img src="/images/link13.png"></a>
+        <a href="https://dimden.dev/" target="_blank" rel=“noopener noreferrer”><img src="https://dimden.dev/services/images/88x31.gif"></a>
+        <a href="https://cloverbell.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link6.gif"></a>
+        <a href="https://nyaa.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link7.gif"></a>
+        <a href="https://prismatic-realm.net/" target="_blank" rel=“noopener noreferrer”><img src="/images/link8.gif"></a>
+        <a href="https://cinni.net/" target="_blank" rel=“noopener noreferrer”><img src="/images/link5.png"></a>
+        <a href="https://yukki.dev/" target="_blank" rel=“noopener noreferrer”><img src="/images/link3.gif"></a>
+        <a href="https://elvenforest.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link4.png"></a>
+        <a href="https://cabbagesorter.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link5.gif"></a>
+        <a href="https://blinkies.cafe/" target="_blank" rel=“noopener noreferrer”><img src="/images/link15.gif"></a>
+        <a href="https://status.cafe/" target="_blank" rel=“noopener noreferrer”><img src="/images/link14.png"></a>
+        <br> <!--These are bigger buttons -->
+        <a href="https://fauux.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link1.gif"></a>
+        <a href="https://mebious.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/btn11.jpg"></a>
+        <a href="https://blackwings.neocities.org/" target="_blank" rel=“noopener noreferrer”><img src="/images/link2.gif"></a>
+    </center>
+    </div></div>
+      
+    <div class=boxtwo>
+    <h2>Credits</h2>
+    <div class=inner>
+    <p class="center">This layout, along with the layouts in my blog pages, were made by <a href="https://eggramen.neocities.org/main" target="_blank" rel="noopener noreferrer">EGGRAMEN</a>.</p>
+    <p class="center">I also use to use a lot of <a href="https://repth.neocities.org/" target="_blank" rel="noopener noreferrer">repth's</a> layouts.</p>
+    <p class="center">Also <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/" target="_blank" rel="noopener noreferrer">sadgrl's layout builder</a>.</p>
+    <p class="center">The CRT scanline effect on my pages came from <a href="https://aleclownes.com/2017/02/01/crt-display.html" target="_blank" rel="noopener referrer">this post</a>. If you have issues with it stopping mid-way through the page, using <code>position: fixed;</code> worked for me.</p>
+    <p class="center">I got some of my fonts from <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">google fonts</a>, <a href="https://www.dafont.com/" target="_blank" rel="noopener noreferrer">dafont</a>, <a href="https://www.fontsquirrel.com/" target="_blank" rel="noopener noreferrer">font squirrel</a>,  and the others I got from <a href="https://478.neocities.org/catalog/" target="_blank" rel="noopener noreferrer">this neocities site</a>.</p>
+    <p class="center">Glitch text effect came from <a href="https://codepen.io/cbanlawi/pen/xxRBeMY?editors=1100" target="_blank" rel="noopener noreferrer">this codepen</a>.</p>
+    <p class="center">My 88x31 site button was made using <a href="https://hekate2.github.io/buttonmaker/" target="_blank" rel="noopener noreferrer">this</a> in-browser button maker.</p>
+    <p class="center">The music player was made by <a href="https://adilene.net/" target="_blank" rel="noopener noreferrer">Virtual Diva</a> and can be found on their pastebin <a href="https://pastebin.com/PiDgrv3J" target="_blank" rel="noopener noreferrer">here</a>.</p>
+    <p class="center">I used <a href="https://catbox.moe/" target="_blank" rel="noopener noreferrer">Catbox</a> for my mp3 files in the music player.</p>
+    <p class="center">The background image came from <a href="https://goblin-heart.net/sadgrl/webmastery/downloads/tiledbgs" target="_blank" rel="noopener noreferrer">sadgrl's tiled background directory</a>.</p>
+    <p class="center">Most of the stamps, graphics, and images can be clicked on to see their source.</p>
+    <p class="center">Most, if not all, of my coding knowledge was learned from <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a>.</p>
+    </div></div>
+      
+</div></div>
+  
+  
+  <div class=sidebar-left>
+      
+    <div class=box><div class=inner>
+        <img src="/images/lainicon.jpg">
+    </div></div>
+      
+    <div class=box><div class=inner>
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=2ain" defer></script>
+    </div></div>
+      
+    <div class=box><div class=inner>
+      <center>
+        <a href="https://www.tumblr.com/luvrevuearchive" target="_blank" rel=“noopener noreferrer”><img src="/images/ls2.png" width="82"></a>
+        <a href="https://www.tumblr.com/luvrevuearchive" target="_blank" rel=“noopener noreferrer”><img src="/images/ls3.gif" width="82"></a>
+      </center>
+    </div></div>
+      
+      <div class=box>
+      <div class=inner>
+      <center>
+        <div id="musicplayer">
+        <div>
+            <marquee scrollamount="8" class="songtitle"></marquee>
+        </div>
+ 
+        <table class="controls">
+            <tr>
+                <td>
+                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward"></i></div>
+                </td>
+                <td>
+                    <div class="playpause-track" onclick="playpauseTrack()" ><i class="fas fa-play"></i></div>
+                </td>
+                <td>
+                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward"></i></div>
+                </td>
+            </tr>
+        </table>
+ 
+        <div class="seeking">
+            <div class="current-time">00:00</div>
+ 
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+ 
+            <div class="total-duration">0:00</div>
+        </div>
+ 
+        <audio id="music" src=""></audio> 
+    </div></center>
+    </div></div>
+      
+    <div class=box>
+      <span class="sptitle">My Blog Posts</span>
+      <div class=inner>
+        <div class="date">August 14, 2023</div>
+        <a href="/palia.html" class="blog">Palia: First Impressions</a><hr>
+        <div class="date">June 24th, 2024</div>
+        <a href="/genshin.html" class="blog">Angry Genshin Impact Rant</a><hr>
+        <div class="date">Coming Soon</div>
+        <a href="/bgp2.html" class="blog">Wuthering Waves Review</a>
+        <hr>
+        <p><a class="small" href="/blog.html#posts">Read more...</a></p>
+      </div></div>
+      
+      <div class=inner><center>
+        <p class="glitch">LET'S ALL LOVE LAIN</p>
+        <p class="glitch">LET'S ALL LOVE LAIN</p>
+        <p class="glitch">LET'S ALL LOVE LAIN</p>
+        <p class="glitch">LET'S ALL LOVE LAIN</p>
+    </center></div>
+      
+</div>
+    
+    <div class=sidebar-right>
+        
+    <div class=box><div class=inner>
+        <center>
+        <img src="/images/wired.gif">
+        <img src="/images/enterid.gif">
+        </center>
+    </div></div>
+        
+      <div class=box><div class=inner>
+      <center>
+        <a href="https://www.tumblr.com/neet-hoard" target="_blank" rel=“noopener noreferrer”><img src="/images/ls6.webp" width="82"></a>
+        <a href="https://www.tumblr.com/neet-hoard" target="_blank" rel=“noopener noreferrer”><img src="/images/ls5.webp" width="82"></a>
+      </center>
+    </div></div>
+        
+    <div class=box>
+    <span class="sptitle">Changelog</span>
+    <div class=inner>
+    <div class=changelog>
+        <p>New <a href="diary2.html#four">diary</a> entry — 07/31/24</p>
+        <p>Made an <a href="/about.html">about</a> page! — 06/27/24</p>
+        <p>New blog page: <a href="/genshin.html">Angry Genshin Impact Rant</a> — 06/24/24</p>
+        <p>New <a href="/gallery.html">gallery</a> and <a href="/media.html">media</a> layouts! — 06/17/24</p>
+        <p>lol homepage get nuked (new layout!) — 06/06/24</p>
+        <p>New <a href="/diary2#one">diary</a> entry! also changed theme of the homepage — 06/03/24</p>
+        <p>redid the <a href="/blog.html">blog</a> page! now separated into categories and re-themed my <a href="diary2.html">diary</a> pages — 05/29/24</p>
+        <p>actually fixed the <a href="/ffxiv-pg1.html">ffxiv</a> page for good this time, phew — 05/24/24</p>
+        <p>updated and re-themed the <a href="/media.html">media</a> page! — 05/20/24</p>
+        <p>made the <a href="/photodiary.html">photo diary</a> page! — 04/29/24</p>
+        <p>finally updated the <a href="/media.html">media</a>, <a href="/gallery.html">gallery</a>, and <a href="ff14.html">ffxiv</a> pages. — 04/28/24</p>
+        <p>added a new <a href="/blog.html">blog</a> entry. also redid some things on the site — 04/27/24</p>
+        <p>updated about damn near the entire site. new layouts made by <a href="https://repth.neocities.org/index.html" target="_blank" rel=“noopener noreferrer”>repth</a>. doing a cardcaptor sakura theme bc she purty. will update the gallery/media pages tomorrow. will also update mobile viewing and the header since i'm not thrilled with it — 04/25/24</p>
+        <p>sorry i've been away for a while. added a new blog entry — 02/20/24</p>
+        <p>added new albums in the <a href="/music">music</a> page — 08/31/23</p>
+        <p>added new movies to the <a href="/film">film</a> page — 08/24/23</p>
+        <p>finished the <a href="/shows">shows</a> page — 08/23/23</p>
+        <p>added a new blog entry — 8/19/23</p>
+        <p>created the <a href="/shows">tv shows</a> page in the <a href="/media">media</a> tab — 08/15/23</p>
+        <p>moved the updates to the homepage — 08/13/23</p>
+        <p>revamped homepage. added lots of buttons that go places — 08/06/23</p>
+        <p>new blog entry — 7/26/23</p>
+        <p>added the gallery section. got the ffxiv page made  —  07/24/23</p>
+        <p>added the media page. made the <a href="/film">film</a>, <a href="/vdgames">video games</a>, and <a href="/music">music</a> links accessible — 07/20/23</p>
+        <p>site was created — 07/10/23</p>
+    </div></div></div>
+        
+    <div class=box>
+   <span class="sptitle">To-Do List:</span>
+    <div class=inner>
+      <p>
+      → fix broken links<br>
+      → redo the about page (sigh)<br>
+      → finish my cyoa game<br>
+      → complete unfinished pages<br>
+      → make some shrines
+      </p>
+    </div></div>
+        
+    <div class=box>
+      <span class="sptitle">Last Diary Entry:</span>
+      <div class=inner>
+        <div class="date">June 3, 2024</div>
+        <a href="/diary2#one.html" class="blog">Wuhtering Waves</a><hr>
+      </div></div>
+        
+    <div class=inner><center>
+        <img src="/images/btn11.jpg">
+    </center></div>
+    
+</div></div>
+    
+    </div>
+    <br>
+    <div class=footer></div>
+    
+    </div> 
+      
+    <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+ 
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+ 
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+ 
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+        
+        // create new audio element
+        let curr_track = document.getElementById("music");
+        
+        //
+        // DEFINE YOUR SONGS HERE!!!!!
+        // MORE THAN FOUR SONGS CAN BE ADDED!!
+        // JUST ADD ANOTHER BRACKET WITH NAME AND PATH
+        // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
+        let track_list = [
+            {
+                name:"virtual tears - tokyopill",
+                path:"https://files.catbox.moe/42gxve.mp3"
+            },
+            {
+                name:"layer 01 - sematary kid",
+                path:"https://files.catbox.moe/f6lenq.mp3"
+            },
+            {
+                name:"paradiselost - thanatos",
+                path:"https://files.catbox.moe/9qno40.mp3"
+            },
+            {
+                name: "carousel {i} - bliss3three",
+                path: "https://files.catbox.moe/gnh5ci.mp3",
+            },
+        ];
+        //
+        //
+        //
+        //
+        //
+ 
+        function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+ 
+            // load a new track
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+            
+            // update details of the track
+            track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
+ 
+            // set an interval of 1000 milliseconds for updating the seek slider
+            updateTimer = setInterval(seekUpdate, 1000);
+            
+            // move to the next track if the current one finishes playing 
+            curr_track.addEventListener("ended", nextTrack);
+        }
+ 
+        // reset values
+        function resetValues() {
+            curr_time.textContent = "0:00";
+            total_duration.textContent = "0:00";
+            seek_slider.value = 0;
+        }
+ 
+        // checks if song is playing
+        function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+        }
+ 
+        // plays track when play button is pressed
+        function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+            
+            // replace icon with the pause icon
+            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+ 
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+            
+            // replace icon with the play icon
+            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+ 
+        // moves to the next track
+        function nextTrack() {
+            if (track_index < track_list.length - 1)
+                track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // moves to the previous track
+        function prevTrack() {
+            if (track_index > 0)
+                track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // seeker slider
+        function seekTo() {
+            seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+        }
+ 
+        function seekUpdate() {
+            let seekPosition = 0;
+            
+            // check if the current track duration is a legible number
+            if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+                seek_slider.value = seekPosition;
+                
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+                
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+            if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+            if (currentMinutes < 10) { currentMinutes = currentMinutes; }
+            if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+ 
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds;
+          }
+        }
+        
+        // load the first track in the tracklist
+        loadTrack(track_index);
+        
+        
+        
+        function myFunction() {
+          // Get the text field
+          var copyText = document.getElementById("myInput");
+
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+
+           // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+        
+        
+        
+        var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+        var num_arr = site_data.info.views.toString().split("");
+        var num_str = "";
+        for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+        }
+        document.getElementById("hitcount").innerHTML = num_str;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=2ainnet", true);
+xhttp.send();
+        
+    </script>
+    
+  </body>
+</html>
