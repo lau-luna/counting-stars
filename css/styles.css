@@ -446,6 +446,7 @@ h1 { font-size :20px; }
     color: var(--primary-color); /* Green text color typical of command prompts */
     font-family: 'Nunito';
     padding: 10px; /* Padding around the text */
+    padding-top: 0;
     border: 1px solid #333; /* Dark border */
     height: 300px; /* Fixed height for scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
@@ -473,6 +474,62 @@ h1 { font-size :20px; }
     background: #FF69B4; /* Hot pink on hover */
 }
 
+.update-container li {
+    margin-bottom: 8%;
+}
+
+
+
+.changelog-container {
+    background-color: var(--foreground-color); /* Black background for console effect */
+    color: var(--primary-color); /* Green text color typical of command prompts */
+    font-family: 'Nunito';
+    padding: 4px; /* Padding around the text */
+    padding-top: 0;
+    border: 1px solid #333; /* Dark border */
+    height: 300px; /* Fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 16px;
+}
+
+.changelog-container ul {
+    list-style: none;
+}
+
+.changelog-container ul li:before {
+    content: ">"; /* Add > symbol before each list item */
+    margin-right: 10px; /* Add some space between the symbol and the text */
+}
+
+/* Custom scrollbar styles */
+.changelog-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+.changelog-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+.changelog-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+.changelog-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+.changelog-container li {
+    margin-bottom: 8%;
+}
+
+.changelog-container strong {
+    font-weight: normal;
+    color: var(--hover-color);
+}
 
 #header {
     position: relative; /* Ensure it is positioned relative to its container */

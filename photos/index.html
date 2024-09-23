@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+    <link rel="stylesheet" href="../css/photos.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/scanlines.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="scanlines">
+        <div id="container">
+
+            <div id="flex">
+                <main>
+                    <div class="frame">
+                        <nav id="navbar">
+                            <ul>
+                                <li><a href="../index.html">Back</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    
+                        <div class="photo">
+                            <a href="spring-2022.html">
+                                <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
+                                <h1>Spring 2022</h1>
+                            </a>
+                            
+                        </div>
+                            
+                        
+                    </div>
+                        
+                </main>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Get the current URL
+        const url = window.location.href;
+
+        // Check if the URL ends with "/photos/index.html"
+        if (url.endsWith("/photos/index.html")) {
+            // Update the URL to remove "index.html"
+            const newUrl = url.replace("/index.html", "");
+            history.pushState({}, '', newUrl);
+        }
+    </script>
+
+
+
+</body>
+
+</html>

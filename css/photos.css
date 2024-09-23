@@ -1,0 +1,189 @@
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/saito/snowy.webp');
+
+    --border-width: 1px;
+    --background-color: #0D0D0D; /* Almost black */
+    --foreground-color: #1A1A1A; /* Dark gray */
+    --text-color: #E0E0E0; /* Light gray for text */
+    --link-color: #00BFFF; /* Bright blue for links */
+    --hover-color: #FF69B4; /* Hot pink for hover effects */
+    --border-color: #333333; /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+
+
+
+    --round-thing: 7px;
+}
+
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+
+ .scanlines {
+    height: 100vh;
+    z-index: 1000;
+ }
+
+
+
+.box img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+li strong {
+    color: var(--hover-color);
+}
+
+
+
+
+
+.links-container {
+    background-color: var(--foreground-color); /* Black background for console effect */
+    color: var(--primary-color); /* Green text color typical of command prompts */
+    font-family: 'Nunito';
+    padding: 10px; /* Padding around the text */
+    border: 1px solid #333; /* Dark border */
+    height: 110px; /* Fixed height for scrolling */
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* Custom scrollbar styles */
+.links-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+.links-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+.links-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+.links-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+.links-container a {
+    width: 86px;
+    height: 30px;
+}
+
+.links-container a img {
+    width: 86px;
+    height: 30px;
+}
+
+#powered {
+    margin-top: 10%;
+    width: min-content;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame #navbar ul li {
+    width: 100%;
+}
+
+
+.scanlines {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+
+  }
+  
+  #flex {
+    display: flex; /* Remove this, as we're using flex on .scanlines now */
+  }
+  
+  
+  .frame {
+    text-align: center; /* Center the button horizontally */
+    width: 20%;
+    background-color: transparent;
+
+  }
+
+
+  #container {
+    max-width: 1080px;
+    background-color: transparent;
+    margin-top: 2%;
+    border: none;
+}
+
+.frame-main{
+    margin-top: 1%;
+    background-color: transparent;
+}
+
+main {
+    background-color: transparent;
+
+}
+
+.photo {
+    width: 31%;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    padding-bottom: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    background-color: #aeaeae50;
+    margin: 10px; /* Add some margin to separate photos */
+  }
+  
+  .photo:nth-child(3n+1) {
+    margin-left: 0; /* Remove left margin for every 3rd photo */
+  }
+  
+  .photo h1 {
+    margin-top: 4%;
+    font-size: 16px;
+    text-align: center; /* Center the name horizontally */
+  }
+
+.photo img {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+ a {
+    text-decoration: none;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Agregué esta propiedad */
+    justify-content: flex-start; /* Agregué esta propiedad */
+    margin-top: 1%;
+  }

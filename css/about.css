@@ -17,15 +17,23 @@
 }
 
 body {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* set the body height to the full viewport height */
+  margin: 0;
+  background-size: cover;
+  }
+  
+ 
+
+#container {
     font-family: 'Nunito';
     margin: 0;
-    background-size: cover;
     background-color:  var(--foreground-color);
-    background-image: var(--body-bg-image);
     color: var(--text-color);
     display: grid;
     place-items: center;
-    height: 100vh;
 }
 
 
@@ -44,13 +52,15 @@ li strong {
 }
 
 
+
+
 .links-container {
     background-color: var(--foreground-color); /* Black background for console effect */
     color: var(--primary-color); /* Green text color typical of command prompts */
     font-family: 'Nunito';
     padding: 10px; /* Padding around the text */
     border: 1px solid #333; /* Dark border */
-    height: 150px; /* Fixed height for scrolling */
+    height: 110px; /* Fixed height for scrolling */
     font-size: 16px;
     display: flex;
     flex-wrap: wrap;

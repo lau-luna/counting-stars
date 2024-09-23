@@ -1,0 +1,21 @@
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/pattern.png');
+
+
+
+    --round-thing: 7px;
+}
+
+body {
+    background-size: 100px 100px;
+}
+
+
+main {
+    padding-right: 1%;
+}
+
+#container {
+    margin-top: 2%;
+}
