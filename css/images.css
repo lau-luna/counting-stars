@@ -19,3 +19,17 @@ main {
 #container {
     margin-top: 2%;
 }
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.images img {
+    width: 49%;
+    margin: 4px;
+ }
+
+
