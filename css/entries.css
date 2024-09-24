@@ -138,3 +138,7 @@ p a:hover {
     color: var(--link-color);
     letter-spacing: 1px;
 }
+
+#entries strong {
+    color: #00BFFF;
+}

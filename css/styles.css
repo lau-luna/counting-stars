@@ -602,3 +602,9 @@ h1 { font-size :20px; }
     text-decoration:double;
     letter-spacing: 1px; /* Separamos las letras 2px entre sí */
 }
+
+#centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
