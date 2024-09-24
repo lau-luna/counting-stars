@@ -1,0 +1,140 @@
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/saito/aquarium.gif');
+
+    --border-width: 1px;
+    --background-color: #0D0D0D; /* Almost black */
+    --foreground-color: #1A1A1A; /* Dark gray */
+    --text-color: #E0E0E0; /* Light gray for text */
+    --link-color: #00BFFF; /* Bright blue for links */
+    --hover-color: #FF69B4; /* Hot pink for hover effects */
+    --border-color: #333333; /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+
+
+
+    --round-thing: 7px;
+}
+
+
+body {
+  background-size: cover;
+  background-position: 0% 50%;
+  background-attachment: fixed;
+  }
+
+
+
+
+
+
+.box img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+li strong {
+    color: var(--hover-color);
+}
+
+
+
+
+#leftSidebar {
+    background-color: #10060be4;
+}
+
+
+/* Custom scrollbar styles */
+.links-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+.links-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+.links-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+.links-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+
+
+#powered {
+    margin-top: 10%;
+    width: min-content;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.scanlines {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+
+  }
+  
+  #flex {
+    display: flex; /* Remove this, as we're using flex on .scanlines now */
+  }
+  
+  #container {
+    max-width: 1080px;
+    background-color: transparent;
+    margin-top: 2%;
+    border: none;
+}
+
+.frame-main{
+    background-color:#10060be4;
+}
+
+main {
+    background-color: transparent;
+    padding-top: 0%;
+}
+
+
+#entries li{
+    margin-bottom: 10px; /* Agrega un espacio de 10px entre cada elemento <li> */
+    
+}
+
+#entries a {
+    text-decoration:none;
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#entries a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}
+
+p a {
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+p a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}

@@ -3,8 +3,8 @@
     --body-bg-image: url('../img/saito/snowy.webp');
 
     --border-width: 1px;
-    --background-color: #0D0D0D; /* Almost black */
-    --foreground-color: #1A1A1A; /* Dark gray */
+    --background-color: #10060be4; /* Almost black */
+    --foreground-color: #10060be4; /* Dark gray */
     --text-color: #E0E0E0; /* Light gray for text */
     --link-color: #00BFFF; /* Bright blue for links */
     --hover-color: #FF69B4; /* Hot pink for hover effects */
@@ -147,16 +147,18 @@ main {
 }
 
 .photo {
+    height: 90%;
     width: 31%;
     border: 1px solid var(--border-color);
     padding: 20px;
-    padding-bottom: 8px;
+    padding-bottom: 1px;
+    padding-top: 8px;
     box-shadow: 0 4px 8px var(--shadow-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction:row;
-    background-color: #aeaeae50;
+    background-color: #10060be4;
     margin: 10px; /* Add some margin to separate photos */
   }
   
@@ -172,7 +174,8 @@ main {
 
 .photo img {
     width: 100%;
-    flex-wrap: wrap;
+    height: 270px;
+    object-fit: cover;
 }
 
 

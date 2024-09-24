@@ -1,0 +1,58 @@
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/saito/train.gif');
+
+
+
+    --round-thing: 7px;
+}
+
+body {
+    background-size:cover;
+    background-position: fixed;
+}
+
+
+main {
+    padding-right: 1%;
+}
+
+#container {
+    margin-top: 2%;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+  width: 25px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+#leftSidebar {
+    height: min-content;
+}
+
+#prev-next a {
+    text-decoration:none;
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#prev-next a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}

@@ -590,3 +590,15 @@ h1 { font-size :20px; }
       border-right-color: #ccc;
     }
   }
+
+  #container .update-container ul li a {
+    color: var(--link-color);
+    text-decoration:none; 
+    transition: letter-spacing 0.3s ease-in-out;
+}
+ 
+#container .update-container ul li a:hover {
+    color: var(--hover-color);
+    text-decoration:double;
+    letter-spacing: 1px; /* Separamos las letras 2px entre sí */
+}
