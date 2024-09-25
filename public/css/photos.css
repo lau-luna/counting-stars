@@ -192,3 +192,9 @@ main {
     justify-content: flex-start; /* Agregué esta propiedad */
     margin-top: 1%;
   }
+
+  @media only screen and (max-width: 800px) {
+    .photo {
+        width: 100%;
+    }
+   }
