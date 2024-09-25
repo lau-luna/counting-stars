@@ -17,7 +17,7 @@ the images as variables */
     --link-color: #00BFFF; /* Bright blue for links */
     --hover-color: #FF69B4; /* Hot pink for hover effects */
     --border-color: #333333; /* Darker gray for borders */
-    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+    --shadow-color: #ff69b480; /* Soft pink shadow effect */
 
 
 
@@ -408,6 +408,7 @@ h1 { font-size :20px; }
    border :1px solid var(--border-color); 
    padding :4px; 
    box-shadow :0 4px 8px var(--shadow-color); 
+   margin-bottom: 5%;
 }
 
 .frame-main {
@@ -448,7 +449,7 @@ h1 { font-size :20px; }
     padding: 10px; /* Padding around the text */
     padding-top: 0;
     border: 1px solid #333; /* Dark border */
-    height: 300px; /* Fixed height for scrolling */
+    height: 200px; /* Fixed height for scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
     font-size: 16px;
 }
@@ -487,7 +488,7 @@ h1 { font-size :20px; }
     padding: 4px; /* Padding around the text */
     padding-top: 0;
     border: 1px solid #333; /* Dark border */
-    height: 300px; /* Fixed height for scrolling */
+    height: 280px; /* Fixed height for scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
     font-size: 16px;
 }
@@ -607,4 +608,69 @@ h1 { font-size :20px; }
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+#lastDiaryEntry a {
+    text-decoration:none;
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#lastDiaryEntry a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}
+
+#lastDiaryEntry strong {
+    color: #00BFFF;
+}
+
+#container #diary-container a {
+    color: var(--link-color);
+    text-decoration:none; 
+    transition: letter-spacing 0.3s ease-in-out;
+}
+ 
+#container #diary-container a:hover {
+    color: var(--hover-color);
+    text-decoration:double;
+    letter-spacing: 1px; /* Separamos las letras 2px entre sí */
+}
+
+#diary-container {
+    background-color: var(--foreground-color); /* Black background for console effect */
+    color: var(--primary-color); /* Green text color typical of command prompts */
+    font-family: 'Nunito';
+    padding: 10px; /* Padding around the text */
+    padding-top: 0;
+    border: 1px solid #333; /* Dark border */
+    height: 255px; /* Fixed height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 16px;
+}
+
+/* Custom scrollbar styles */
+#diary-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+#diary-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+#diary-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+#diary-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+#diary-container {
+    color:#FF69B4;
 }
