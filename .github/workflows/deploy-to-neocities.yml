@@ -1,0 +1,33 @@
+name: Deploy to Neocities
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build and deploy to Neocities
+        env:
+          NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_TOKEN }}
+        run: |
+          # Build your website (e.g., using npm run build)
+          npm run build
+
+          # Create a zip file of the public folder
+          zip -r public.zip public/*
+
+          # Deploy to Neocities using the Neocities API
+          curl -X POST \
+            https://neocities.org/api/v1/sites/${NEOCITIES_SITE_NAME}/upload \
+            -H 'Authorization: Bearer ${NEOCITIES_API_KEY}' \
+            -H 'Content-Type: application/zip' \
+            -T public.zip
