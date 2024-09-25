@@ -25,8 +25,8 @@ jobs:
         npm i
         npm run build
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v2
+      uses: bcomnes/deploy-to-neocities@v2.0.2
       with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}git 
+        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
         dist_dir: public
