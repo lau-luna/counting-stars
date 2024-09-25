@@ -1,0 +1,7 @@
+              
+- name: Deploy to Neocities
+
+
+              
+  uses: bcomnes/deploy-to-neocities@v2.0.2
+
