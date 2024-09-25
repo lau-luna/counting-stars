@@ -151,3 +151,11 @@ main {
 .frame-main img {
     width: 100%;
 }
+
+
+@media only screen and (max-width: 800px) {
+    .frame-main{
+        margin-top: 5%;
+        width: 85%;
+    }
+}

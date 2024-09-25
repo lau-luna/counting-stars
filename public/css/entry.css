@@ -13,9 +13,7 @@ body {
 }
 
 
-main {
-    padding-right: 1%;
-}
+
 
 #container {
     margin-top: 2%;
@@ -56,3 +54,5 @@ p {
     color: var(--link-color);
     letter-spacing: 1px;
 }
+
+
