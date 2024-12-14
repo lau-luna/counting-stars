@@ -1,0 +1,233 @@
+:root {
+    --header-image: url('../img/dcvd9ll-011c762f-9942-4de4-9cc8-64bdaf696e51.gif');
+    --body-bg-image: url('../img/saito/rain.gif');
+
+    --border-width: 1px;
+    --background-color: #0D0D0D; /* Almost black */
+    --foreground-color: #1A1A1A; /* Dark gray */
+    --text-color: #E0E0E0; /* Light gray for text */
+    --link-color: #00BFFF; /* Bright blue for links */
+    --hover-color: #FF69B4; /* Hot pink for hover effects */
+    --border-color: #333333; /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+
+    --read-color: #8BC34A;
+    --reading-color: #FFC107;
+    --to-read-color: #66D9EF;
+    --reviewed-color: #FF69B4;
+
+    --round-thing: 7px;
+}
+
+.reading a h1 {
+    color: var(--reading-color);
+}
+
+.read a h1 {
+    color: var(--read-color);
+}
+
+.to-read a h1 {
+    color: var(--to-read-color);
+}
+
+.reviewed a h1 {
+    color: var(--reviewed-color);
+}
+
+
+
+body {
+  background-size: cover;
+  background-position: 0% 50%;
+  background-attachment: fixed;
+  }
+
+
+
+
+
+
+.box img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+li strong {
+    color: var(--hover-color);
+}
+
+
+
+
+#leftSidebar {
+    background-color: #10060be4;
+}
+
+
+/* Custom scrollbar styles */
+.links-container::-webkit-scrollbar {
+    width: 8px; /* Reduced width of the scrollbar */
+}
+
+.links-container::-webkit-scrollbar-track {
+    background: #1A1A1A; /* Dark gray for the track */
+    border-radius: 4px; /* Rounded corners for the track */
+}
+
+.links-container::-webkit-scrollbar-thumb {
+    background: #00BFFF; /* Bright blue for the thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D; /* Border around the thumb */
+    height: 30px; /* Set a specific height for the thumb */
+}
+
+.links-container::-webkit-scrollbar-thumb:hover {
+    background: #FF69B4; /* Hot pink on hover */
+}
+
+
+
+#powered {
+    margin-top: 10%;
+    width: min-content;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.scanlines {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+
+  }
+  
+  #flex {
+    display: flex; /* Remove this, as we're using flex on .scanlines now */
+  }
+  
+  #container {
+    max-width: 1080px;
+    background-color: transparent;
+    margin-top: 2%;
+    border: none;
+}
+
+.frame-main{
+    background-color:#10060be4;
+}
+
+main {
+    background-color: transparent;
+    padding-top: 0%;
+}
+
+
+#entries-2024 li{
+    margin-bottom: 10px; /* Agrega un espacio de 10px entre cada elemento <li> */
+}
+
+#entries-2024 a {
+    text-decoration:none;
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#entries-2024 a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}
+
+p a {
+    color: var(--hover-color);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+p a:hover {
+    color: var(--link-color);
+    letter-spacing: 1px;
+}
+
+#entries-2024 strong {
+    color: #00BFFF;
+}
+
+.books {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Agrega esta propiedad para que los elementos flex se envuelvan a la siguiente fila */
+}
+
+.book {
+    display: flex; /* Agrega esta propiedad para que los libros sean flexibles */
+    height: 320px;
+  
+    width: calc(33.33% - 10px); /* Calcula el ancho de cada libro para que quepan 3 por fila */
+    margin: 6px; /* Mantén el margen para separar los libros */
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    padding-bottom: 1px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    background-color: #10060be4;
+  }
+
+  .book p {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+  }
+
+  
+  .book:nth-child(3n+1) {
+    margin-left: 0; /* Remove left margin for every 3rd photo */
+  }
+  
+  .book a h1 {
+    margin-top: 4%;
+    font-size: 10px;
+    text-align: center; /* Center the name horizontally */
+  }
+
+.book img {
+    width: 170px;
+    height: 235px;
+    object-fit: cover;
+}
+
+
+ a {
+    text-decoration: none;
+}
+
+.book.read span.book-status {
+    display: none;
+  }
+  
+  .book.reading span.book-status {
+    display: none;
+  }
+  
+  .book.to-read span.book-status {
+    display: none;
+  }
+  
+  .book.reviewed .book-status {
+    display: none;
+  }
+  
+  .book.reviewed:hover .book-status {
+    display: inline;
+    font-size: 12px;
+    color: var(--hover-color);
+  }
