@@ -61,8 +61,8 @@
 
                             <div class="books">
                                 <!-- Estado "reading" -->
-                                <div class="book reading">
-                                    <a href="../photos/spring-2022.html">
+                                <div class="book read">
+                                    <a href="">
                                         <img src="https://files.catbox.moe/8tnd9z.jpg" alt="">
                                         <p>Haruki Murakami</p>
                                         <h1>Norwegian Wood</h1>
@@ -70,8 +70,8 @@
                                 </div>
 
                                 <!-- Estado "to-read" -->
-                                <div class="book to-read">
-                                    <a href="../photos/spring-2022.html">
+                                <div class="book read">
+                                    <a href="">
                                         <img src="https://files.catbox.moe/6ycjhd.jpg" alt="">
                                         <p>Satoshi Yagisawa</p>
                                         <h1>Days at the Morisaki Bookshop</h1>
@@ -79,15 +79,14 @@
                                 </div>
 
                                  <!-- Estado "to-read" -->
-                                 <div class="book to-read">
-                                    <a href="../photos/spring-2022.html">
+                                 <div class="book read">
+                                    <a href="">
                                         <img src="https://files.catbox.moe/isc2z5.jpg" alt="">
                                         <p>Satoshi Yagisawa</p>
                                         <h1>More Days at the Morisaki Bookshop</h1>
                                     </a>
                                 </div>
-
-                               
+ 
                             </div>
                         </div>
 
@@ -97,43 +96,30 @@
                             <h1>Philosophy</h1>
 
                             <div class="books">
-                                <!-- Estado "read" -->
+                                <!-- estado "read" -->
                                 <div class="book read">
-                                    <a href="../photos/spring-2022.html">
-                                        <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
-                                        <h1>Spring 2022</h1>
+                                    <a href="">
+                                        <img src="./covers/the-stranger-albert-camus.webp" alt="">
+                                        <p>Albert Camus</p>
+                                        <h1>The stranger</h1>
                                         <p></p>
                                     </a>
                                 </div>
 
-                                <!-- Estado "reading" -->
-                                <div class="book reading">
-                                    <a href="../photos/spring-2022.html">
-                                        <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
-                                        <h1>Spring 2022</h1>
+                                <!-- estado "read" -->
+                                <div class="book read">
+                                    <a href="">
+                                        <img src="./covers/the-fall-albert-camus.webp" alt="">
+                                        <p>Albert Camus</p>
+                                        <h1>The fall</h1>
+                                        <p></p>
                                     </a>
                                 </div>
 
-                                <!-- Estado "to-read" -->
-                                <div class="book to-read">
-                                    <a href="../photos/spring-2022.html">
-                                        <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
-                                        <h1>Spring 2022</h1>
-                                    </a>
-                                </div>
-
-                                <!-- Estado "reviewed" -->
-                                <div class="book reviewed">
-                                    <a href="../photos/spring-2022.html">
-                                        <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
-                                        <h1>Spring 2022</h1>
-                                        <span class="book-status">Click to view review</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
+                            </div> 
+                
+                        <div style="display: none">
+                          <div>
                             <hr>
 
                             <h1>Novels</h1>
@@ -142,7 +128,7 @@
                                 <!-- Estado "read" -->
                                 <div class="book read">
                                     <a href="../photos/spring-2022.html">
-                                        <img src="https://files.catbox.moe/gecxrb.jpg" alt="">
+                                        <img src="./covers/the-fall-albert-camus.webp" alt="">
                                         <h1>Spring 2022</h1>
                                     </a>
                                 </div>
@@ -254,7 +240,10 @@
                                     </a>
                                 </div>
                             </div>
+
                         </div>
+                      
+                      </div>
 
 
                         <hr>
@@ -275,28 +264,23 @@
 
                 <aside id="rightSidebar">
                     <div class="frame">
-                        <h2>Changelog</h2>
+                        <h2>Legend</h2>
 
                         <div class="changelog-container">
 
                             <ul style="padding-left:10px;">
-                                <li>Made a script to show the Latests Diary Entry on index - <strong>24-09-24</strong>
-                                </li>
-
-                                <li>Made a Diary page - <strong>24-09-24</strong></li>
-
-                                <li>Made a Photography page - <strong>23-09-24</strong></li>
-
-                                <li>Made an about page - <strong>21-09-24</strong></li>
-
-                                <li>Started developing site - <strong>19-09-24</strong></li>
+                               <h1 class="legend-read">Read</h1>
+                               <h1 class="legend-reading">Reading</h1>
+                               <h1 class="legend-to-read">To-Read</h1> 
+                               <h1 class="legend-reviewed">Reviewed</h1>
+                               <h1 class="legend-dropped">Dropped</h1>
                             </ul>
                         </div>
                     </div>
 
                     <div style="margin-top: 15px; display: flex; justify-content: center;" class="frame">
-                        <img src="./img/buttons/hosted by.png" alt="" style="margin-right: 6%;">
-                        <img src="./img/buttons/button215.gif" alt="">
+                        <img src="../img/buttons/hosted by.png" alt="" style="margin-right: 6%;">
+                        <img src="../img/buttons/button215.gif" alt="">
                     </div>
 
                 </aside>
@@ -307,9 +291,6 @@
 
 
     </div>
-
-
-    <script src="../js/getEntries.js"></script>
 
 
 </body>

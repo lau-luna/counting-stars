@@ -15,6 +15,7 @@
     --reading-color: #FFC107;
     --to-read-color: #66D9EF;
     --reviewed-color: #FF69B4;
+    --dropped-color: #ed2f2f; 
 
     --round-thing: 7px;
 }
@@ -35,6 +36,29 @@
     color: var(--reviewed-color);
 }
 
+.dropped a h1 {
+  color: var(--dropped-color);
+}
+
+.legend-reading {
+    color: var(--reading-color);
+}
+
+.legend-read{
+    color: var(--read-color);
+}
+
+.legend-to-read {
+    color: var(--to-read-color);
+}
+
+.legend-reviewed {
+    color: var(--reviewed-color);
+}
+
+.legend-dropped {
+    color: var(--dropped-color);
+}
 
 
 body {
@@ -200,8 +224,8 @@ p a:hover {
   }
 
 .book img {
-    width: 170px;
-    height: 235px;
+    width: 100%;
+    height: 210px;
     object-fit: cover;
 }
 
