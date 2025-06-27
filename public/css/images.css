@@ -21,11 +21,11 @@ main {
 }
 
 #leftSidebar {
-  background-color: #10060be4;
+    background-color: #10060be4;
 }
 
-main{
-  background-color: #10060be4;
+main {
+    background-color: #10060be4;
 }
 
 
@@ -37,16 +37,22 @@ main{
     margin-top: 2%;
 }
 
+.images {
+    overflow: hidden;
+}
+
 .images img {
     width: 49%;
     margin: 4px;
- }
+    object-fit: cover;
+    height: 300px;
+}
 
- .images:hover {
+.images:hover {
     cursor: pointer;
-  }
+}
 
- .lightbox {
+.lightbox {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,22 +62,83 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .lightbox img {
+}
+
+.lightbox img {
     max-width: 90%;
     max-height: 90%;
     margin: 20px;
-    border: 1px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
+}
 
-  .lightbox:hover {
+.lightbox:hover {
     cursor: pointer;
-  }
+}
 
-  .frame-main {
+.frame-main {
     background-color: inherit;
     background-color: #10060be4 !important;
-  }
-  
+}
+
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    box-shadow: 0 0 10px hotpink;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+    z-index: 10000;
+}
+
+.arrow.left {
+    left: 30px;
+}
+
+.arrow.left:hover {
+    color: hotpink;
+}
+
+.arrow.right {
+    right: 30px;
+}
+
+.arrow.right:hover {
+    color: hotpink;
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10001;
+    font-weight: bold;
+    user-select: none;
+}
+
+.close-button:hover {
+    color: hotpink;
+}
