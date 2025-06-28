@@ -3,19 +3,26 @@
     --body-bg-image: url('../img/saito/rain.gif');
 
     --border-width: 1px;
-    --background-color: #0D0D0D; /* Almost black */
-    --foreground-color: #1A1A1A; /* Dark gray */
-    --text-color: #E0E0E0; /* Light gray for text */
-    --link-color: #00BFFF; /* Bright blue for links */
-    --hover-color: #FF69B4; /* Hot pink for hover effects */
-    --border-color: #333333; /* Darker gray for borders */
-    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+    --background-color: #0D0D0D;
+    /* Almost black */
+    --foreground-color: #1A1A1A;
+    /* Dark gray */
+    --text-color: #E0E0E0;
+    /* Light gray for text */
+    --link-color: #00BFFF;
+    /* Bright blue for links */
+    --hover-color: #FF69B4;
+    /* Hot pink for hover effects */
+    --border-color: #333333;
+    /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5);
+    /* Soft pink shadow effect */
 
     --read-color: #8BC34A;
     --reading-color: #FFC107;
     --to-read-color: #66D9EF;
     --reviewed-color: #FF69B4;
-    --dropped-color: #ed2f2f; 
+    --dropped-color: #ed2f2f;
 
     --round-thing: 7px;
 }
@@ -37,14 +44,14 @@
 }
 
 .dropped a h1 {
-  color: var(--dropped-color);
+    color: var(--dropped-color);
 }
 
 .legend-reading {
     color: var(--reading-color);
 }
 
-.legend-read{
+.legend-read {
     color: var(--read-color);
 }
 
@@ -62,15 +69,10 @@
 
 
 body {
-  background-size: cover;
-  background-position: 0% 50%;
-  background-attachment: fixed;
-  }
-
-
-
-
-
+    background-size: cover;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+}
 
 .box img {
     width: 100%;
@@ -80,12 +82,9 @@ ul {
     list-style-type: none;
 }
 
-
 li strong {
     color: var(--hover-color);
 }
-
-
 
 
 #leftSidebar {
@@ -95,23 +94,31 @@ li strong {
 
 /* Custom scrollbar styles */
 .links-container::-webkit-scrollbar {
-    width: 8px; /* Reduced width of the scrollbar */
+    width: 8px;
+    /* Reduced width of the scrollbar */
 }
 
 .links-container::-webkit-scrollbar-track {
-    background: #1A1A1A; /* Dark gray for the track */
-    border-radius: 4px; /* Rounded corners for the track */
+    background: #1A1A1A;
+    /* Dark gray for the track */
+    border-radius: 4px;
+    /* Rounded corners for the track */
 }
 
 .links-container::-webkit-scrollbar-thumb {
-    background: #00BFFF; /* Bright blue for the thumb */
-    border-radius: 4px; /* Rounded corners for the thumb */
-    border: 2px solid #0D0D0D; /* Border around the thumb */
-    height: 30px; /* Set a specific height for the thumb */
+    background: #00BFFF;
+    /* Bright blue for the thumb */
+    border-radius: 4px;
+    /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D;
+    /* Border around the thumb */
+    height: 30px;
+    /* Set a specific height for the thumb */
 }
 
 .links-container::-webkit-scrollbar-thumb:hover {
-    background: #FF69B4; /* Hot pink on hover */
+    background: #FF69B4;
+    /* Hot pink on hover */
 }
 
 
@@ -134,21 +141,22 @@ li strong {
     left: 0;
     background-color: transparent;
 
-  }
-  
-  #flex {
-    display: flex; /* Remove this, as we're using flex on .scanlines now */
-  }
-  
-  #container {
+}
+
+#flex {
+    display: flex;
+    /* Remove this, as we're using flex on .scanlines now */
+}
+
+#container {
     max-width: 1080px;
     background-color: transparent;
     margin-top: 2%;
     border: none;
 }
 
-.frame-main{
-    background-color:#10060be4;
+.frame-main {
+    background-color: #10060be4;
 }
 
 main {
@@ -157,12 +165,13 @@ main {
 }
 
 
-#entries-2024 li{
-    margin-bottom: 10px; /* Agrega un espacio de 10px entre cada elemento <li> */
+#entries-2024 li {
+    margin-bottom: 10px;
+    /* Agrega un espacio de 10px entre cada elemento <li> */
 }
 
 #entries-2024 a {
-    text-decoration:none;
+    text-decoration: none;
     color: var(--hover-color);
     transition: letter-spacing 0.3s ease-in-out;
 }
@@ -190,68 +199,78 @@ p a:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap; /* Agrega esta propiedad para que los elementos flex se envuelvan a la siguiente fila */
+    flex-wrap: wrap;
+    /* Agrega esta propiedad para que los elementos flex se envuelvan a la siguiente fila */
 }
 
 .book {
-    display: flex; /* Agrega esta propiedad para que los libros sean flexibles */
-    height: 320px;
-  
-    width: calc(33.33% - 10px); /* Calcula el ancho de cada libro para que quepan 3 por fila */
-    margin: 6px; /* Mantén el margen para separar los libros */
+    display: flex;
+    /* Agrega esta propiedad para que los libros sean flexibles */
+    height: auto;
+
+    width: calc(20% - 10px);
+    /* Calcula el ancho de cada libro para que quepan 3 por fila */
+    margin: 6px;
+    /* Mantén el margen para separar los libros */
     border: 1px solid var(--border-color);
     padding: 5px;
     padding-bottom: 1px;
     box-shadow: 0 4px 8px var(--shadow-color);
     background-color: #10060be4;
-  }
+}
 
-  .book p {
+.book p {
     font-size: 13px;
     margin-top: 6px;
     margin-bottom: 0px;
-  }
+}
 
-  
-  .book:nth-child(3n+1) {
-    margin-left: 0; /* Remove left margin for every 3rd photo */
-  }
-  
-  .book a h1 {
+
+.book:nth-child(3n+1) {
+    margin-left: 0;
+    /* Remove left margin for every 3rd photo */
+}
+
+.book a h1 {
     margin-top: 4%;
     font-size: 10px;
-    text-align: center; /* Center the name horizontally */
-  }
+    text-align: center;
+    /* Center the name horizontally */
+}
 
 .book img {
     width: 100%;
-    height: 225px;
+    height: 200px;
     object-fit: cover;
 }
 
 
- a {
+a {
     text-decoration: none;
 }
 
 .book.read span.book-status {
     display: none;
-  }
-  
-  .book.reading span.book-status {
+}
+
+.book.reading span.book-status {
     display: none;
-  }
-  
-  .book.to-read span.book-status {
+}
+
+.book.to-read span.book-status {
     display: none;
-  }
-  
-  .book.reviewed .book-status {
+}
+
+.book.dropped span.book-status {
     display: none;
-  }
-  
-  .book.reviewed:hover .book-status {
+}
+
+.book.reviewed .book-status {
+    display: none;
+}
+
+.book.reviewed:hover .book-status {
     display: inline;
     font-size: 12px;
     color: var(--hover-color);
-  }
+}
