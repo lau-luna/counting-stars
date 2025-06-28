@@ -67,6 +67,10 @@
     color: var(--dropped-color);
 }
 
+.legend h1 {
+    font-size: 00px;
+}
+
 
 body {
     background-size: cover;
@@ -208,8 +212,7 @@ p a:hover {
     /* Agrega esta propiedad para que los libros sean flexibles */
     height: auto;
 
-    width: calc(20% - 10px);
-    /* Calcula el ancho de cada libro para que quepan 3 por fila */
+    width: 18%;
     margin: 6px;
     /* Mantén el margen para separar los libros */
     border: 1px solid var(--border-color);
@@ -226,10 +229,6 @@ p a:hover {
 }
 
 
-.book:nth-child(3n+1) {
-    margin-left: 0;
-    /* Remove left margin for every 3rd photo */
-}
 
 .book a h1 {
     margin-top: 4%;
@@ -275,6 +274,3 @@ a {
     color: var(--hover-color);
 }
 
-.lol {
-    color: white;
-}
