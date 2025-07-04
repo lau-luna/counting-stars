@@ -271,3 +271,34 @@ a {
     color: var(--hover-color);
 }
 
+/* bookshelves-button Styles */
+/* navigation section!! */
+.bookshelves-buttons {
+    /* navbar color */
+    font-family: 'Sans';
+    font-size: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.bookshelves-buttons ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.bookshelves-buttons li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 1%;
+    padding-right: 1%;
+    transition: letter-spacing 0.3s ease-in-out;
+    color: var(--hover-color);
+    width: auto;
+}
+
+.bookshelves-buttons li:hover {
+    letter-spacing: 2px;
+    /* Separamos las letras 2px entre sí */
+    color: var(--link-color);
+}

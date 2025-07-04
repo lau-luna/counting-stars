@@ -1,0 +1,28 @@
+body {
+    background-image: url("../img/saito/cafe.gif");
+}
+
+.book-title {
+    color: var(--link-color);
+}
+
+.star-rating {
+    color: var(--hover-color);
+}
+.review-title {
+    overflow: hidden; /* asegura que el contenedor encierre ambos elementos */
+}
+
+.review-title .review-cover {
+    float: right;              /* o `left` si preferís del otro lado */
+    width: 25%;                /* o el ancho que prefieras */
+    margin-left: 20px;         /* separación del texto */
+    margin-bottom: 10px;
+}
+
+.review-title .review-cover img {
+    width: 100%;
+    height: auto;
+}
+
+

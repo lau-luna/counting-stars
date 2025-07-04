@@ -34,7 +34,7 @@
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./diary/entries.html">Diary</a></li>
-            <li><a href="./error420.html">Music</a></li>
+            <li><a href="./music/reviews.html">Music</a></li>
             <li><a href="./readings/readings.html">Readings</a></li>
             <li><a href="./error420.html">Games</a></li>
             <li><a href="./photos/albums.html">Photography</a></li>
@@ -61,6 +61,9 @@
 
             <div class="update-container">
               <ul style="padding-left: 10px">
+                <li>Added <a href="./music/reviews.html#luv(sic)-hexalogy-live-at-liquidroom">Nujabes Luv(sic) Hexalogy
+                    Live</a> review to Music</li>
+
                 <li>Added <a href="./photos/mendoza-june-2025.html">Mendoza, June 2025</a> album to Photography</li>
 
                 <li>Added <a href="./photos/cataratas-del-iguazu.html">Cataratas del Iguazú</a> album to Photography
@@ -112,6 +115,14 @@
               <h1>Last Diary Entry</h1>
 
               <div id="lastDiaryEntry"></div>
+            </div>
+
+            <hr />
+
+            <div>
+              <h1>Lastest Music Review</h1>
+
+              <div id="lastMusicReview"></div>
             </div>
 
             <hr />
@@ -190,6 +201,10 @@
             <div class="changelog-container">
               <ul style="padding-left: 10px">
                 <li>
+                  Opened the Music section! -
+                  <strong>04-07-25</strong>
+                </li>
+                <li>
                   Removed the Programming section, I don't plan to talk about code stuff here -
                   <strong>27-06-25</strong>
                 </li>
@@ -211,7 +226,7 @@
 
           <div style="margin-top: 15px; display: flex; justify-content: center" class="frame">
             <img src="./img/buttons/hosted by.png" alt="" style="margin-right: 6%" />
-            <img src="./img/buttons/button215.gif" alt="" />
+            <img src="./img/buttons/thirdimpact.png" alt="" />
           </div>
 
           <div class="frame">
@@ -222,7 +237,6 @@
                 <li>To all kind hearts: save a person who wears total black, we're broken but good ones.</li>
                 <li>I'll be working on the site again, I don't have much else to do these days.</li>
                 <li>Probably I'll review some manga.</li>
-                <li>There's a huge problem with the Readings page CSS. Maybe it's my browser caché.</li>
             </div>
           </div>
 
@@ -240,6 +254,7 @@
   </div>
 
   <script src="./js/getEntries.js"></script>
+  <script src="./js/getLastMusicReview.js"></script>
 </body>
 
 </html>
