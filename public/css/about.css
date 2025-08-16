@@ -3,13 +3,20 @@
     --body-bg-image: url('../img/antik-008-fuu.gif');
 
     --border-width: 1px;
-    --background-color: #0D0D0D; /* Almost black */
-    --foreground-color: #1A1A1A; /* Dark gray */
-    --text-color: #E0E0E0; /* Light gray for text */
-    --link-color: #00BFFF; /* Bright blue for links */
-    --hover-color: #FF69B4; /* Hot pink for hover effects */
-    --border-color: #333333; /* Darker gray for borders */
-    --shadow-color: rgba(255, 105, 180, 0.5); /* Soft pink shadow effect */
+    --background-color: #0D0D0D;
+    /* Almost black */
+    --foreground-color: #1A1A1A;
+    /* Dark gray */
+    --text-color: #E0E0E0;
+    /* Light gray for text */
+    --link-color: #00BFFF;
+    /* Bright blue for links */
+    --hover-color: #FF69B4;
+    /* Hot pink for hover effects */
+    --border-color: #333333;
+    /* Darker gray for borders */
+    --shadow-color: rgba(255, 105, 180, 0.5);
+    /* Soft pink shadow effect */
 
 
 
@@ -21,19 +28,17 @@ body {
     justify-content: center;
     align-items: center;
     background-size: cover;
-  }
-  
- 
+}
 
 #container {
     font-family: 'Nunito';
     margin: 0;
-    background-color:  var(--foreground-color);
+    background-color: var(--foreground-color);
     color: var(--text-color);
     display: grid;
     place-items: center;
     margin-top: 2%;
-    
+    min-height: auto;
 }
 
 
@@ -55,12 +60,17 @@ li strong {
 
 
 .links-container {
-    background-color: var(--foreground-color); /* Black background for console effect */
-    color: var(--primary-color); /* Green text color typical of command prompts */
+    background-color: var(--foreground-color);
+    /* Black background for console effect */
+    color: var(--primary-color);
+    /* Green text color typical of command prompts */
     font-family: 'Nunito';
-    padding: 10px; /* Padding around the text */
-    border: 1px solid #333; /* Dark border */
-    height: 110px; /* Fixed height for scrolling */
+    padding: 10px;
+    /* Padding around the text */
+    border: 1px solid #333;
+    /* Dark border */
+    height: 110px;
+    /* Fixed height for scrolling */
     font-size: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -71,23 +81,31 @@ li strong {
 
 /* Custom scrollbar styles */
 .links-container::-webkit-scrollbar {
-    width: 8px; /* Reduced width of the scrollbar */
+    width: 8px;
+    /* Reduced width of the scrollbar */
 }
 
 .links-container::-webkit-scrollbar-track {
-    background: #1A1A1A; /* Dark gray for the track */
-    border-radius: 4px; /* Rounded corners for the track */
+    background: #1A1A1A;
+    /* Dark gray for the track */
+    border-radius: 4px;
+    /* Rounded corners for the track */
 }
 
 .links-container::-webkit-scrollbar-thumb {
-    background: #00BFFF; /* Bright blue for the thumb */
-    border-radius: 4px; /* Rounded corners for the thumb */
-    border: 2px solid #0D0D0D; /* Border around the thumb */
-    height: 30px; /* Set a specific height for the thumb */
+    background: #00BFFF;
+    /* Bright blue for the thumb */
+    border-radius: 4px;
+    /* Rounded corners for the thumb */
+    border: 2px solid #0D0D0D;
+    /* Border around the thumb */
+    height: 30px;
+    /* Set a specific height for the thumb */
 }
 
 .links-container::-webkit-scrollbar-thumb:hover {
-    background: #FF69B4; /* Hot pink on hover */
+    background: #FF69B4;
+    /* Hot pink on hover */
 }
 
 .links-container a {
@@ -114,4 +132,3 @@ li strong {
 .frame #navbar ul li {
     width: 100%;
 }
-
