@@ -26,11 +26,7 @@ the images as variables */
   --shadow-color: #ff69b480;
   /* Soft pink shadow effect */
 
-  --glow-color: rgba(150, 150, 255, 0.8)
-
-
-
-  --round-thing: 7px;
+  --glow-color: rgba(150, 150, 255, 0.8) --round-thing: 7px;
 }
 
 /* if you have the URL of a font, you can set it below */
@@ -658,6 +654,7 @@ h1 {
   width: 64px;
   height: 64px;
 }
+
 .frame h2 {
   background-color: #86375e6b;
   /* Fondo oscuro */
@@ -837,142 +834,147 @@ h1 {
 }
 
 .anniversary h1 {
-font-size: 25px;
+  font-size: 25px;
 }
+
 .image-container {
-            position: relative;
-            display: inline-block;
-            margin: 20px 0;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .character-image {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Efecto de sombra en los bordes de los personajes */
-        .character-shadow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            z-index: 1;
-            background: transparent;
-            box-shadow: 
-                0 0 15px 5px var(--shadow-color),
-                0 0 30px 10px var(--glow-color);
-            animation: pulsating-shadow 3s infinite alternate;
-            opacity: 0.8;
-        }
-        
-        /* Efecto de partículas alrededor */
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 15px;
-            z-index: 3;
-            pointer-events: none;
-        }
-        
-        .particle {
-            position: absolute;
-            background: var(--hover-color);
-            border-radius: 50%;
-            animation: float 5s infinite ease-in-out;
-            opacity: 0.2;
-        }
-        
-        /* Animaciones */
-        @keyframes pulsating-shadow {
-            0% {
-                opacity: 0.5;
-                box-shadow: 
-                    0 0 15px 5px var(--shadow-color),
-                    0 0 30px 10px var(--glow-color);
-            }
-            100% {
-                opacity: 0.9;
-                box-shadow: 
-                    0 0 25px 8px var(--shadow-color),
-                    0 0 40px 15px var(--glow-color);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            25% {
-                opacity: 0.8;
-            }
-            50% {
-                transform: translateY(-20px) translateX(10px);
-                opacity: 0.4;
-            }
-            75% {
-                opacity: 0.8;
-            }
-        }
-        
-        .controls {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            width: 100%;
-            max-width: 500px;
-        }
-        
-        .color-control {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 15px 0;
-        }
-        
-        label {
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        
-        input[type="color"] {
-            width: 80px;
-            height: 40px;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        input[type="range"] {
-            width: 300px;
-            margin-top: 5px;
-        }
-        
-        .explanation {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            text-align: left;
-            max-width: 600px;
-        }
-        
-        .explanation h2 {
-            color: #a1c4fd;
-            margin-top: 0;
-        }
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
+.character-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+}
 
+/* Efecto de sombra en los bordes de los personajes */
+.character-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: 1;
+  background: transparent;
+  box-shadow:
+    0 0 15px 5px var(--shadow-color),
+    0 0 30px 10px var(--glow-color);
+  animation: pulsating-shadow 3s infinite alternate;
+  opacity: 0.8;
+}
+
+/* Efecto de partículas alrededor */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: var(--hover-color);
+  border-radius: 50%;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.2;
+}
+
+/* Animaciones */
+@keyframes pulsating-shadow {
+  0% {
+    opacity: 0.5;
+    box-shadow:
+      0 0 15px 5px var(--shadow-color),
+      0 0 30px 10px var(--glow-color);
+  }
+
+  100% {
+    opacity: 0.9;
+    box-shadow:
+      0 0 25px 8px var(--shadow-color),
+      0 0 40px 15px var(--glow-color);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.4;
+  }
+
+  75% {
+    opacity: 0.8;
+  }
+}
+
+.controls {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.color-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="color"] {
+  width: 80px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 300px;
+  margin-top: 5px;
+}
+
+.explanation {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.explanation h2 {
+  color: #a1c4fd;
+  margin-top: 0;
+}
