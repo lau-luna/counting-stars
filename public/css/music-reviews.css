@@ -25,7 +25,7 @@ body {
 .review-title .review-cover {
     float: right;
     /* o `left` si preferís del otro lado */
-    width: 25%;
+    width: 30%;
     /* o el ancho que prefieras */
     margin-left: 20px;
     /* separación del texto */
