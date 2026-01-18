@@ -8,5 +8,8 @@
     "build": "npm run build:css && npm run build:js"
   },
   "author": "lau",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "exif-js": "^2.3.0"
+  }
 }

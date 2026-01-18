@@ -3,7 +3,6 @@ let metaData = [];
 function loadImages() {
       let imagesContainer = document.getElementsByClassName('images')[0];
     
-      
 
       links.forEach(async (link, index) => {
         let img = document.createElement('img');
