@@ -45,30 +45,14 @@ main {
     width: 49%;
     margin: 4px;
     object-fit: cover;
-    height: 300px;
+    max-height: 350px;
 }
 
 .images:hover {
     cursor: pointer;
 }
 
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    margin: 20px;
-}
 
 .lightbox:hover {
     cursor: pointer;
@@ -94,8 +78,7 @@ main {
 }
 
 .lightbox img {
-    max-width: 85%;
-    max-height: 85%;
+    max-height: 90%;
     box-shadow: 0 0 10px hotpink;
 }
 
@@ -141,4 +124,8 @@ main {
 
 .close-button:hover {
     color: hotpink;
+}
+
+.exifDiv {
+  margin-left: 2%;
 }

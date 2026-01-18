@@ -30,10 +30,7 @@ body {
 }
 
 
-.scanlines {
-    min-height: 100vh;
-    z-index: 1000;
-}
+
 
 
 
@@ -171,7 +168,7 @@ main {
 }
 
 .photo {
-    height: 90%;
+    height: 92%;
     width: 31%;
     border: 1px solid var(--border-color);
     padding: 20px;
@@ -220,7 +217,7 @@ a {
     margin-top: 1%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .image img {
         width: 100%;
     }
