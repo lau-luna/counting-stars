@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Villa Gesell, 2026</title>
+
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../css/images.css" type="text/css" />
+
+    <link rel="stylesheet" href="../css/scanlines.css" type="text/css" />
+  </head>
+
+  <style>
+    :root {
+      --body-bg-image: url("../img/pattern.png");
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="flex">
+        <aside id="leftSidebar">
+          <div class="frame">
+            <nav id="navbar">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <hr />
+                <li><a href="../photos/albums.html">Photography</a></li>
+                <hr />
+                <li><a href="../diary/entries.html">Diary</a></li>
+                <hr />
+                <li><a href="../music/reviews.html">Music</a></li>
+                <hr />
+                <li><a href="../readings/readings.html">Readings</a></li>
+                <hr />
+                <li><a href="#">Games</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div id="buttons">
+            <div class="frame" id="powered">
+              <a href="https://mebious.neocities.org/">
+                <img src="../img/buttons/nyan.gif" alt="" />
+              </a>
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div class="frame-main">
+            <h1>Summer '25 ->'26</h1>
+            <p>
+              <strong
+                >Pure random shit captured during my summer vacations from 2025
+                to 2026. Decided to upload them separated from the Villa Gesell
+                album, since these ones are a bit more boring, compared to the
+                beach and stuff... Regular takes, but I had some fun.</strong
+              >
+            </p>
+            <p>
+              <strong
+                >Fun fact: I've almost got detained during these. José took my
+                camera and started taking photos at a house with the flash on
+                from inside the car, that shit is like a flashbang. The house
+                owner came out asking what the heck we were doing at midnight
+                taking pics, he got pretty angry and started calling the cops -
+                Honestly, I would do the same... Just in the middle of the call,
+                my other friend comes out of the house and doesn't understand
+                anything. The house owner was my friend's uncle, and he lived
+                just next to him. Historical save... My friend was like: "I
+                leave you for two minutes and you're already getting detained";
+                6th was his reaction. We're sorry...</strong
+              >
+            </p>
+            <hr />
+
+            <div class="images"></div>
+
+            <hr />
+
+            <div id="buttons">
+              <div>
+                <img src="../img/buttons/wmp.gif" alt="" />
+                <img src="../img/buttons/hosted by.png" alt="" />
+                <img src="../img/buttons/lain.gif" alt="" />
+                <img
+                  src="../img/buttons/site_best_viewed_with_monitor.gif"
+                  alt=""
+                />
+                <img src="../img/buttons/foreveronline2.gif" alt="" />
+                <img src="../img/buttons/www2.gif" alt="" />
+                <img src="../img/buttons/msie.gif" alt="" />
+                <img src="../img/buttons/made_with_windows.gif" alt="" />
+                <img
+                  src="../img/buttons/tumblr_inline_p0bn6sbzDa1ty2vf6_500.gif"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+
+    <script>
+      // Load Images
+      let rawNameStr = `DSC02965.JPG
+DSC02977.JPG
+DSC02991.JPG
+DSC03003.JPG
+DSC030131.jpg
+DSC03013.JPG
+DSC03014.JPG
+DSC03021.JPG
+DSC03025.JPG
+DSC03026-bw.JPG
+DSC03047.JPG
+DSC03048.JPG
+DSC03053.JPG
+DSC03070.JPG
+DSC03094.JPG
+DSC03139.JPG
+DSC03443.JPG
+DSC03449.JPG
+DSC03453.JPG
+DSC03456.JPG
+DSC03466.JPG
+DSC03526.JPG
+DSC03540.JPG
+DSC03556.JPG
+DSC03570.JPG
+DSC03592.JPG
+DSC03609.JPG
+DSC03626.JPG
+DSC03632.JPG
+DSC03650.JPG`;
+
+      let photoNameArr = rawNameStr.trim().split(/\s+/);
+
+      let links = photoNameArr.map(
+        (name) => "../photos/summer-25-26/" + name.trim(),
+      );
+    </script>
+
+    <script type="module" src="../js/imageLoader.js"></script>
+  </body>
+</html>
