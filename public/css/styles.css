@@ -485,7 +485,7 @@ h1 {
   padding-top: 0;
   border: 1px solid #333;
   /* Dark border */
-  height: 200px;
+  height: 500px;
   /* Fixed height for scrolling */
   overflow-y: auto;
   /* Enable vertical scrolling */
