@@ -1,0 +1,139 @@
+:root {
+  --body-bg-image: url("../img/saito/coinParking.gif");
+
+  --border-width: 1px;
+  --background-color: #0d0d0d;
+  /* Almost black */
+  --foreground-color: #1a1a1a;
+  /* Dark gray */
+  --text-color: #e0e0e0;
+  /* Light gray for text */
+  --link-color: #00bfff;
+  /* Bright blue for links */
+  --hover-color: #ff69b4;
+  /* Hot pink for hover effects */
+  --border-color: #333333;
+  /* Darker gray for borders */
+  --shadow-color: #ff69b480;
+  /* Soft pink shadow effect */
+
+  --glow-color: rgba(150, 150, 255, 0.8) --round-thing: 7px;
+
+  --round-thing: 7px;
+}
+
+body {
+  background-size: 115%;
+  background-position: 0% center; /* movés solo el eje horizontal */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+
+
+#container {
+  margin-top: 2%;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  width: 25px;
+}
+
+p {
+  line-height: 1.4;
+}
+
+#leftSidebar {
+  height: min-content;
+}
+
+#prev-next a {
+  text-decoration: none;
+  color: var(--hover-color);
+  transition: letter-spacing 0.3s ease-in-out;
+}
+
+#prev-next a:hover {
+  color: var(--link-color);
+  letter-spacing: 1px;
+}
+
+/* academic-navbar Styles */
+/* navigation section!! */
+.academic-navbar {
+  /* navbar color */
+  font-family: "Sans";
+  font-size: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  margin-bottom: 3%;
+}
+
+.academic-navbar ul {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  display: flex;
+}
+
+.academic-navbar li {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 1%;
+  padding-right: 1%;
+  transition: letter-spacing 0.3s ease-in-out;
+  width: auto;
+  color: var(--link-color);
+}
+
+.academic-navbar li:hover {
+  letter-spacing: 2px;
+  /* Separamos las letras 2px entre sí */
+  color: var(--hover-color);
+}
+
+
+.academic-navbar li a {
+  text-decoration: none;
+}
+
+#container #link,
+#container #link:link,
+#container #link:visited {
+  text-decoration: none;
+  color: #ff69b4;
+  transition: letter-spacing 0.3s ease-in-out;
+}
+
+#container #link:hover {
+  color: var(--link-color);
+  letter-spacing: 1px;
+}
