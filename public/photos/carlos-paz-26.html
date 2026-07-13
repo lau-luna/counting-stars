@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Paz, 2026</title>
+
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../css/images.css" type="text/css" />
+
+    <link rel="stylesheet" href="../css/scanlines.css" type="text/css" />
+  </head>
+
+  <style>
+    :root {
+      --body-bg-image: url("../img/pattern.png");
+    }
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="flex">
+        <aside id="leftSidebar">
+          <div class="frame">
+            <nav id="navbar">
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <hr />
+                <li><a href="../photos/albums.html">Photography</a></li>
+                <hr />
+                <li><a href="../diary/entries.html">Diary</a></li>
+                <hr />
+                <li><a href="../music/reviews.html">Music</a></li>
+                <hr />
+                <li><a href="../readings/readings.html">Readings</a></li>
+                <hr />
+                <li><a href="#">Games</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div id="buttons">
+            <div class="frame" id="powered">
+              <a href="https://mebious.neocities.org/">
+                <img src="../img/buttons/nyan.gif" alt="" />
+              </a>
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div class="frame-main">
+            <h1>Carlos Paz, 2026</h1>
+            <p>
+              <strong>
+                Trip on winter vacations. Starring a vid of Argentina's victory
+                against Switzerland on the world cup.
+              </strong>
+            </p>
+            <hr />
+
+            <div class="images"></div>
+
+            <video controls id="video">
+              <source src="carlos-paz-26/arg-swiss.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <hr />
+
+            <div id="buttons">
+              <div>
+                <img src="../img/buttons/wmp.gif" alt="" />
+                <img src="../img/buttons/hosted by.png" alt="" />
+                <img src="../img/buttons/lain.gif" alt="" />
+                <img
+                  src="../img/buttons/site_best_viewed_with_monitor.gif"
+                  alt=""
+                />
+                <img src="../img/buttons/foreveronline2.gif" alt="" />
+                <img src="../img/buttons/www2.gif" alt="" />
+                <img src="../img/buttons/msie.gif" alt="" />
+                <img src="../img/buttons/made_with_windows.gif" alt="" />
+                <img
+                  src="../img/buttons/tumblr_inline_p0bn6sbzDa1ty2vf6_500.gif"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+
+    <script>
+      // Load Images
+      let rawNameStr = `DSC03725.JPG
+DSC03729.JPG
+DSC03739.JPG
+DSC03745.JPG
+DSC03749.JPG
+DSC03751.JPG
+DSC03766.JPG
+DSC03771.JPG
+DSC03776.JPG
+DSC03783.JPG
+DSC03784.JPG
+DSC03789.JPG
+DSC03793.JPG
+DSC03794.JPG
+DSC03800.JPG
+DSC03802.JPG
+DSC03805.JPG
+DSC03809.JPG
+DSC03813.JPG
+DSC03818.JPG`;
+
+      let photoNameArr = rawNameStr.trim().split(/\s+/);
+
+      let links = photoNameArr.map(
+        (name) => "../photos/carlos-paz-26/" + name.trim(),
+      );
+
+      let vid = document.getElementById("video");
+      vid.volume = 0.2;
+    </script>
+
+    <script type="module" src="../js/imageLoader.js"></script>
+  </body>
+</html>
