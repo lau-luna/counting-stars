@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:css && npm run build:js"
+    "build": "echo \"Static site, nothing to build\""
   },
   "author": "lau",
   "license": "ISC",
