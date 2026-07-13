@@ -11,15 +11,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-        # 1. Instalar dependencias (si es necesario)
+      - uses: actions/checkout@v4
       - run: npm install
-      # 2. Compilar el sitio para generar la carpeta 'public'
-      - run: npm run build 
+      - run: npm run build
   
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: false
+          preview_before_deploy: true
           dist_dir: public 
